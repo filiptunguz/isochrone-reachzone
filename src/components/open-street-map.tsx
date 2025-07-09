@@ -22,7 +22,7 @@ export default function OpenStreetMap({ focusOn, children }: OpenStreetMapProps)
 	}, [focusOn, mapContainer]);
 
 	return (
-		<div className="rounded-3xl overflow-hidden">
+		<div className="rounded-3xl overflow-hidden border border-primary">
 			<MapContainer
 				center={[44.1634188, 20.9128565]}
 				zoom={6}
