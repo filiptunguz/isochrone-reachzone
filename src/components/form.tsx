@@ -34,7 +34,13 @@ export default function Form({ onChange, defaultTransportation, defaultTravelTim
 		<div className="space-y-4 p-6 border border-primary rounded-3xl">
 			<SelectTransportation onValueChange={onTransportationChange} value={transportation} />
 			<div className="flex gap-4">
-				<Slider step={10} min={0} max={30} onValueChange={onTravelTimeChange} />
+				<Slider
+					step={10}
+					min={0}
+					max={30}
+					defaultValue={[defaultTravelTime]}
+					onValueChange={onTravelTimeChange}
+				/>
 				<div className="border-l border-gray-300 pl-2">
 					<span className="block w-14 whitespace-nowrap text-center text-sm">
 						{deferredTravelTime} min
