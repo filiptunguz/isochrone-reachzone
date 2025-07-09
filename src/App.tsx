@@ -16,11 +16,13 @@ export default function App() {
 	};
 
 	return (
-		<div className="p-8 space-y-4">
-			<Form onChange={onFormChange} defaultTransportation={DEFAULT_TRANSPORTATION} />
-			<OpenStreetMap focusOn={bounds}>
-				<Polygon positions={bounds} color="#244F4B" />
-			</OpenStreetMap>
-		</div>
+		<main className="flex items-center max-w-[1100px] mx-auto h-svh">
+			<div className="p-8 space-y-4 flex-1">
+				<Form onChange={onFormChange} defaultTransportation={DEFAULT_TRANSPORTATION} />
+				<OpenStreetMap focusOn={bounds}>
+					<Polygon positions={bounds} color="#244F4B" />
+				</OpenStreetMap>
+			</div>
+		</main>
 	);
 }
