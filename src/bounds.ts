@@ -1,11 +1,14 @@
 import type { LatLngTuple } from 'leaflet';
+import type { Transportation } from '@/components/select-transportation.tsx';
+
+export type TravelTime = 10 | 20 | 30;
 
 export const polygonBounds: {
-	[key: string]: {
-		[key: string]: LatLngTuple[]; // Using LatLngTuple from 'leaflet'
+	[key in Transportation]: {
+		[key in TravelTime]: LatLngTuple[]; // Using LatLngTuple from 'leaflet'
 	};
 } = {
-	car: {
+	driving: {
 		10: [
 			[46.11671, 19.62361],
 			[46.11671, 19.626194],
@@ -1350,7 +1353,7 @@ export const polygonBounds: {
 			[46.122803, 19.663168],
 		],
 	},
-	walk: {
+	walking: {
 		10: [
 			[46.107456, 19.670654],
 			[46.105656, 19.67324],
@@ -1542,7 +1545,7 @@ export const polygonBounds: {
 			[46.10215, 19.652437],
 		],
 	},
-	bicycle: {
+	cycling: {
 		10: [
 			[46.11612, 19.648125],
 			[46.11342, 19.652004],
