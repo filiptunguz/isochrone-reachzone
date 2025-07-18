@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# Isochrone Map Component 🗺️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive component built with **React**, **Vite**, **TypeScript**, **TailwindCSS**, and **React-Leaflet**, designed to visualize isochrones (reachable areas) on an OpenStreetMap-based map based on selected transportation mode and travel time.
 
-Currently, two official plugins are available:
+![Isochrone Search Map Gif](./assets/isochrone-reachzone.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Transport Mode Selection**: Choose between walking, driving, biking, or public transport.
+- **Travel Time Slider**: Adjust the travel time dynamically.
+- **Live Map Updates**: Map view centers and updates the isochrone instantly on form change.
+- **OpenStreetMap Integration**: Map tiles rendered using React-Leaflet and OpenStreetMap.
+- **Isochrone Polygon Display**: Visualizes the reachable area as a styled polygon overlay.
+- **Responsive & Performant**: Built with Vite, TailwindCSS, and optimized rendering for a smooth experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React + TypeScript
+- **Styling**: TailwindCSS
+- **Map & GIS**: React-Leaflet (Leaflet), OpenStreetMap tiles
+- **Build Tool**: Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Node.js (v16 or higher)
+- npm or yarn
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Installation
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone https://github.com/yourusername/isochrone-map-component.git
+cd isochrone-map-component
+npm install
